@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando links</title>
+    <style>
+        /*
+        # = id 
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = children 
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(255, 145, 0);
+        }
+        a:visited {
+            color: red;
+        }
+        a:active {
+            color: aqua;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .especial:hover {
+            color: white;
+            background-color: rgb(255, 145, 0);
+            text-decoration: none;
+        }
+        .especial::before {
+            content: "*";
+            font-weight: lighter;
+        }
+        .especial::after {
+            content: "*";
+            font-weight: lighter;
+        }
+        .pagina2 {
+            color: rgb(255, 81, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando um link</h1>
+    <p>Para ouvir algumas das minha músicas favoritas, acesse o 
+        <a href="https://www.youtube.com/watch?v=SpS0JbjKN9U" target="_blank"> Bote da Víbora.</a>
+    </p>
+    <p>Essa é a segunda música que eu mais gosto do meu artista favorito 
+        <a href="https://www.youtube.com/watch?v=lg2RJl-jCzw" target="_blank">O Sol e a Lua.</a>
+    </p>
+    <p>Esse foi o meu top 3 músicas favoritas, fiquem com a terceira acessando aqui 
+        <a href="https://www.youtube.com/watch?v=vjMMQ46ljF8" target="_blank" class="especial">Shinigami ou Hollow.</a>
+    </p>
+    <a href="links02.html" class="pagina2"> 2</a>
+</body>
+</html>
